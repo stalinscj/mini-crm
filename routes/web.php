@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +15,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/***********************************************************************************************************************
+ *                                              Rutas Protegidas                                                       *
+ ***********************************************************************************************************************/
+
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+});
+
+
+/***********************************************************************************************************************
+ *                                              Rutas Públicas                                                         *
+ ***********************************************************************************************************************/
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes(['register' => false]);
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
