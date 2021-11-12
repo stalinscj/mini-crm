@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Company;
+use App\Models\Collaborator;
+
 class DashboardController extends Controller
 {
     /**
@@ -11,6 +15,10 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        $usersCount         = User::count();
+        $companiesCount     = Company::count();
+        $collaboratorsCount = Collaborator::count();
+
+        return view('dashboard.index', compact('usersCount', 'companiesCount', 'collaboratorsCount'));
     }
 }
