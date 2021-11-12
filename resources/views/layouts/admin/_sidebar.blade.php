@@ -25,6 +25,17 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
+        {{-- Users --}}
+        <li class="nav-item">
+          <a href="{{ route('users.index') }}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>Usuarios</p>
+          </a>
+        </li>
+        {{-- ./Users --}}
+
+        <hr>
+
         {{-- Logout --}}
         <li class="nav-item">
           <a href="#" class="nav-link" onclick="event.preventDefault();
