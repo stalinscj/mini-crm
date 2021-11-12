@@ -43,4 +43,14 @@ class Company extends Model
     {
         $this->attributes['website'] = strtolower($value);
     }
+
+    /**
+     * Get the collaborators for the company.
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function collaborators()
+    {
+        return $this->hasMany(Collaborator::class);
+    }
 }

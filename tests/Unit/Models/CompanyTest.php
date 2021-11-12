@@ -4,6 +4,7 @@ namespace Tests\Unit\Models;
 
 use Tests\TestCase;
 use App\Models\Company;
+use App\Models\Collaborator;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CompanyTest extends TestCase
@@ -34,5 +35,17 @@ class CompanyTest extends TestCase
             ->create(['website' => $website]);
 
         $this->assertTrue($company->website == strtolower($website), 'The website is not stored in lowercase');
+    }
+
+    /**
+     * @test
+     */
+    public function has_many_collaborators()
+    {
+        $company = Company::factory()
+            ->hasCollaborators(2)
+            ->create();
+
+        $this->assertInstanceOf(Collaborator::class, $company->collaborators->first());
     }
 }
