@@ -33,6 +33,15 @@
           </a>
         </li>
         {{-- ./Companies --}}
+        
+        {{-- Collaborators --}}
+        <li class="nav-item">
+          <a href="{{ route('collaborators.index') }}" class="nav-link">
+            <i class="nav-icon fas fa-user-tie"></i>
+            <p>Colaboradores</p>
+          </a>
+        </li>
+        {{-- ./Collaborators --}}
 
         <hr>
 
