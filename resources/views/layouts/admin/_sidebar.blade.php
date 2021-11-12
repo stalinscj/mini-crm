@@ -25,6 +25,17 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
+        {{-- Companies --}}
+        <li class="nav-item">
+          <a href="{{ route('companies.index') }}" class="nav-link">
+            <i class="nav-icon fas fa-building"></i>
+            <p>Empresas</p>
+          </a>
+        </li>
+        {{-- ./Companies --}}
+
+        <hr>
+
         {{-- Users --}}
         <li class="nav-item">
           <a href="{{ route('users.index') }}" class="nav-link">
