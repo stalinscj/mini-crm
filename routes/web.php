@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -21,6 +22,9 @@ use App\Http\Controllers\DashboardController;
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('users', UserController::class);
+    Route::post('users/{user}', [UserController::class, 'restore'])->name('users.restore');
 
 });
 
