@@ -24,7 +24,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.required', ['attribute' => 'name'])
+            trans('validation.required', ['attribute' => 'nombre'])
         );
 
         $this->assertDatabaseCount('companies', 0);
@@ -37,7 +37,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.required', ['attribute' => 'name'])
+            trans('validation.required', ['attribute' => 'nombre'])
         );
     }
 
@@ -54,7 +54,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.string', ['attribute' => 'name'])
+            trans('validation.string', ['attribute' => 'nombre'])
         );
 
         $this->assertDatabaseCount('companies', 0);
@@ -67,7 +67,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.string', ['attribute' => 'name'])
+            trans('validation.string', ['attribute' => 'nombre'])
         );
     }
 
@@ -84,7 +84,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.max.string', ['attribute' => 'name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'nombre', 'max' => 60])
         );
 
         $this->assertDatabaseCount('companies', 0);
@@ -97,7 +97,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.max.string', ['attribute' => 'name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'nombre', 'max' => 60])
         );
     }
 
@@ -116,7 +116,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.unique', ['attribute' => 'name'])
+            trans('validation.unique', ['attribute' => 'nombre'])
         );
 
         $this->assertDatabaseCount('companies', 1);
@@ -129,7 +129,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.unique', ['attribute' => 'name'])
+            trans('validation.unique', ['attribute' => 'nombre'])
         );
     }
 
@@ -300,7 +300,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.required', ['attribute' => 'website'])
+            trans('validation.required', ['attribute' => 'sitio web'])
         );
 
         $this->assertDatabaseCount('companies', 0);
@@ -313,7 +313,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.required', ['attribute' => 'website'])
+            trans('validation.required', ['attribute' => 'sitio web'])
         );
     }
 
@@ -330,7 +330,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.string', ['attribute' => 'website'])
+            trans('validation.string', ['attribute' => 'sitio web'])
         );
 
         $this->assertDatabaseCount('companies', 0);
@@ -343,7 +343,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.string', ['attribute' => 'website'])
+            trans('validation.string', ['attribute' => 'sitio web'])
         );
     }
 
@@ -360,7 +360,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.max.string', ['attribute' => 'website', 'max' => 100]),
+            trans('validation.max.string', ['attribute' => 'sitio web', 'max' => 100]),
             1
         );
 
@@ -374,7 +374,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.max.string', ['attribute' => 'website', 'max' => 100]),
+            trans('validation.max.string', ['attribute' => 'sitio web', 'max' => 100]),
             1
         );
     }
@@ -392,7 +392,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.url', ['attribute' => 'website'])
+            trans('validation.url', ['attribute' => 'sitio web'])
         );
 
         $this->assertDatabaseCount('companies', 0);
@@ -405,7 +405,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.url', ['attribute' => 'website'])
+            trans('validation.url', ['attribute' => 'sitio web'])
         );
     }
 
@@ -424,7 +424,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.unique', ['attribute' => 'website'])
+            trans('validation.unique', ['attribute' => 'sitio web'])
         );
 
         $this->assertDatabaseCount('companies', 1);
@@ -437,7 +437,7 @@ class ValidateCompanyFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'website',
-            trans('validation.unique', ['attribute' => 'website'])
+            trans('validation.unique', ['attribute' => 'sitio web'])
         );
     }
 }

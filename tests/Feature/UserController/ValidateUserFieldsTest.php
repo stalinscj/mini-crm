@@ -24,7 +24,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.required', ['attribute' => 'name'])
+            trans('validation.required', ['attribute' => 'nombre'])
         );
 
         $this->assertDatabaseCount('users', 1);
@@ -37,7 +37,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.required', ['attribute' => 'name'])
+            trans('validation.required', ['attribute' => 'nombre'])
         );
     }
 
@@ -54,7 +54,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.string', ['attribute' => 'name'])
+            trans('validation.string', ['attribute' => 'nombre'])
         );
 
         $this->assertDatabaseCount('users', 1);
@@ -67,7 +67,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.string', ['attribute' => 'name'])
+            trans('validation.string', ['attribute' => 'nombre'])
         );
     }
 
@@ -84,7 +84,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.max.string', ['attribute' => 'name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'nombre', 'max' => 60])
         );
 
         $this->assertDatabaseCount('users', 1);
@@ -97,7 +97,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.max.string', ['attribute' => 'name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'nombre', 'max' => 60])
         );
     }
 
@@ -266,7 +266,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.required', ['attribute' => 'password'])
+            trans('validation.required', ['attribute' => 'contraseña'])
         );
 
         $this->assertDatabaseCount('users', 1);
@@ -287,7 +287,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.required', ['attribute' => 'password'])
+            trans('validation.required', ['attribute' => 'contraseña'])
         );
 
         session()->forget('errors');
@@ -312,7 +312,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.string', ['attribute' => 'password'])
+            trans('validation.string', ['attribute' => 'contraseña'])
         );
 
         $this->assertDatabaseCount('users', 1);
@@ -327,7 +327,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.string', ['attribute' => 'password'])
+            trans('validation.string', ['attribute' => 'contraseña'])
         );
     }
 
@@ -344,7 +344,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.min.string', ['attribute' => 'password', 'min' => 8])
+            trans('validation.min.string', ['attribute' => 'contraseña', 'min' => 8])
         );
 
         $this->assertDatabaseCount('users', 1);
@@ -359,7 +359,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.min.string', ['attribute' => 'password', 'min' => 8])
+            trans('validation.min.string', ['attribute' => 'contraseña', 'min' => 8])
         );
     }
 
@@ -376,7 +376,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.confirmed', ['attribute' => 'password'])
+            trans('validation.confirmed', ['attribute' => 'contraseña'])
         );
 
         $this->assertDatabaseCount('users', 1);
@@ -391,7 +391,7 @@ class ValidateUserFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'password',
-            trans('validation.confirmed', ['attribute' => 'password'])
+            trans('validation.confirmed', ['attribute' => 'contraseña'])
         );
     }
 }

@@ -25,7 +25,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.required', ['attribute' => 'name'])
+            trans('validation.required', ['attribute' => 'nombre'])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -38,7 +38,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.required', ['attribute' => 'name'])
+            trans('validation.required', ['attribute' => 'nombre'])
         );
     }
 
@@ -55,7 +55,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.string', ['attribute' => 'name'])
+            trans('validation.string', ['attribute' => 'nombre'])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -68,7 +68,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.string', ['attribute' => 'name'])
+            trans('validation.string', ['attribute' => 'nombre'])
         );
     }
 
@@ -85,7 +85,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.max.string', ['attribute' => 'name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'nombre', 'max' => 60])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -98,7 +98,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'name',
-            trans('validation.max.string', ['attribute' => 'name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'nombre', 'max' => 60])
         );
     }
 
@@ -115,7 +115,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'last_name',
-            trans('validation.required', ['attribute' => 'last name'])
+            trans('validation.required', ['attribute' => 'apellido'])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -128,7 +128,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'last_name',
-            trans('validation.required', ['attribute' => 'last name'])
+            trans('validation.required', ['attribute' => 'apellido'])
         );
     }
 
@@ -145,7 +145,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'last_name',
-            trans('validation.string', ['attribute' => 'last name'])
+            trans('validation.string', ['attribute' => 'apellido'])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -158,7 +158,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'last_name',
-            trans('validation.string', ['attribute' => 'last name'])
+            trans('validation.string', ['attribute' => 'apellido'])
         );
     }
 
@@ -175,7 +175,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'last_name',
-            trans('validation.max.string', ['attribute' => 'last name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'apellido', 'max' => 60])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -188,7 +188,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'last_name',
-            trans('validation.max.string', ['attribute' => 'last name', 'max' => 60])
+            trans('validation.max.string', ['attribute' => 'apellido', 'max' => 60])
         );
     }
 
@@ -359,7 +359,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'phone',
-            trans('validation.required', ['attribute' => 'phone'])
+            trans('validation.required', ['attribute' => 'teléfono'])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -372,7 +372,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'phone',
-            trans('validation.required', ['attribute' => 'phone'])
+            trans('validation.required', ['attribute' => 'teléfono'])
         );
     }
 
@@ -389,7 +389,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'phone',
-            trans('validation.string', ['attribute' => 'phone'])
+            trans('validation.string', ['attribute' => 'teléfono'])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -402,7 +402,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'phone',
-            trans('validation.string', ['attribute' => 'phone'])
+            trans('validation.string', ['attribute' => 'teléfono'])
         );
     }
 
@@ -419,7 +419,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'phone',
-            trans('validation.digits', ['attribute' => 'phone', 'digits' => 9])
+            trans('validation.digits', ['attribute' => 'teléfono', 'digits' => 9])
         );
 
         $this->assertDatabaseCount('collaborators', 0);
@@ -432,7 +432,7 @@ class ValidateCollaboratorFieldsTest extends TestCase
 
         $this->assertSessionHasErrorKeyValue(
             'phone',
-            trans('validation.digits', ['attribute' => 'phone', 'digits' => 9])
+            trans('validation.digits', ['attribute' => 'teléfono', 'digits' => 9])
         );
     }
 }
