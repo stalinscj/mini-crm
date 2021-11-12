@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CollaboratorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,9 @@ use App\Http\Controllers\DashboardController;
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+    Route::resource('collaborators', CollaboratorController::class);
+    Route::post('collaborators/{collaborator}', [CollaboratorController::class, 'restore'])->name('collaborators.restore');
 
     Route::resource('companies', CompanyController::class);
     Route::post('companies/{company}', [CompanyController::class, 'restore'])->name('companies.restore');
