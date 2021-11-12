@@ -110,9 +110,10 @@ class UserController extends Controller
      */
     public function restore($id)
     {
-        $user = User::withTrashed()->firstWhere('id', $id);
-        
-        $user->restore();
+        User::withTrashed()
+            ->where('id', $id)
+            ->firstOrFail()
+            ->restore();
 
         Alert::toast('Usuario restaurado', 'success');
 

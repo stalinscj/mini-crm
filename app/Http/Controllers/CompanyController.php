@@ -114,8 +114,10 @@ class CompanyController extends Controller
      */
     public function restore($id)
     {
-        $company = Company::withTrashed()->firstWhere('id', $id);
-        $company->restore();
+        Company::withTrashed()
+            ->where('id', $id)
+            ->firstOrFail()
+            ->restore();
 
         Alert::toast('Empresa restaurada exitosamente', 'success');
 
